@@ -74,9 +74,10 @@ class Login : ComponentActivity() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     val user = auth.currentUser
+                    user?.sendEmailVerification() //Enviamos el correo de verificacion
                     Toast.makeText(
                         this,
-                        "Usuario registrado correctamente",
+                        "Usuario registrado correctamente,verifique su direccion de correo",
                         Toast.LENGTH_SHORT
                     ).show()
                     limpiarDatos()
@@ -100,12 +101,24 @@ class Login : ComponentActivity() {
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     val user = auth.currentUser
-                    val intent = Intent(this, Bienvenida::class.java)
-                    intent.putExtra(
-                        "Correo",
-                        email
-                    ) //Enviamos correo para ser usado en otras actividades
-                    startActivity(intent)
+                    if (user != null && user.isEmailVerified) { //Verificamos el correo
+                        val intent = Intent(this, Bienvenida::class.java)
+                        intent.putExtra(
+                            "Correo",
+                            email
+                        ) //Enviamos correo para ser usado en otras actividades
+                        startActivity(intent)
+
+                    } else {
+                        Toast.makeText(
+                            this,
+                            "El correo no ha sido verificado",
+                            Toast.LENGTH_SHORT
+                        ).show()
+
+                    }
+
+
                 } else {
                     val exception = task.exception
                     Toast.makeText(
