@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "643209069908",
+    "project_id": "authvetpet",
+    "storage_bucket": "authvetpet.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643209069908:android:7773dd3d855c4e718034c1",
+        "android_client_info": {
+          "package_name": "com.example.appandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "643209069908-05inmspd1rvp2et6r0js42he4vsh83u4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.appandroid",
+            "certificate_hash": "65189f7c7257bbd4f6012e2698ba88dd58a1c6c3"
+          }
+        },
+        {
+          "client_id": "643209069908-6frmah73dkqrod537juaa9e4c4nlbej1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJprpHVzeALJBcsEUaxQUaAoT7pxyEoTY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "643209069908-6frmah73dkqrod537juaa9e4c4nlbej1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
