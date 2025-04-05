@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AppAndroid"
         tools:targetApi="31">
         <activity
-            android:name=".Login"
+            android:name=".SplashActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.AppAndroid">
@@ -23,6 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Login" />
         <activity android:name=".Bienvenida" />
     </application>
 
