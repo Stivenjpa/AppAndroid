@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.AppAndroid" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.AppAndroid" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Fondo general de la app -->
+        <item name="android:windowBackground">#FFFFFF</item>
+
+        <!-- Color principal (barra de título, botones) -->
+        <item name="colorPrimary">#00C853</item> <!-- Verde -->
+        <item name="colorPrimaryDark">#009624</item> <!-- Verde oscuro -->
+        <item name="colorAccent">#00E676</item> <!-- Verde claro (botones, highlights) -->
+
+        <!-- Texto claro sobre fondo oscuro -->
+        <item name="android:textColorPrimary">#000000</item>
+    </style>
+
 </resources>

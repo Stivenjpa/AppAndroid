@@ -24,6 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Bienvenida" />
+        <activity android:name=".FormPets"
+            android:theme="@style/Theme.AppCompat.Light"/>
     </application>
 
 </manifest>
