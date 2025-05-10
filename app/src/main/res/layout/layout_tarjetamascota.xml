@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- Imagen de la mascota -->
+        <ImageView
+            android:id="@+id/imgMascota"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mascota_default"
+            android:contentDescription="Imagen de la mascota" /> <!-- Descripción accesible -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <!-- Nombre de la mascota -->
+            <TextView
+                android:id="@+id/txtNombre"
+                android:text="Nombre:"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Nombre de la mascota" /> <!-- Descripción accesible -->
+
+            <!-- Edad de la mascota -->
+            <TextView
+                android:id="@+id/txtEdad"
+                android:text="Edad:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Edad de la mascota" /> <!-- Descripción accesible -->
+
+            <!-- Vacunas de la mascota -->
+            <TextView
+                android:id="@+id/txtVacunas"
+                android:text="Vacunas:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Vacunas de la mascota" /> <!-- Descripción accesible -->
+
+            <!-- Dueño de la mascota -->
+            <TextView
+                android:id="@+id/txtDueno"
+                android:text="Dueño:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Nombre del dueño de la mascota" /> <!-- Descripción accesible -->
+
+            <!-- Veterinario de la mascota -->
+            <TextView
+                android:id="@+id/txtVeterinario"
+                android:text="Veterinario:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Nombre del veterinario de la mascota" /> <!-- Descripción accesible -->
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

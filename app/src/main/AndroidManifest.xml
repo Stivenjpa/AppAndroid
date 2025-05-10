@@ -26,6 +26,7 @@
         <activity android:name=".Bienvenida" />
         <activity android:name=".FormPets"
             android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:name=".PetsTar" />
     </application>
 
 </manifest>
