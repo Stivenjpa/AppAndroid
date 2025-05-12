@@ -1,5 +1,6 @@
 package com.example.appandroid
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -18,6 +19,8 @@ class PetsClinic : Fragment() {
     private lateinit var duenoEdit: EditText
     private lateinit var veterinarioEdit: EditText
     private lateinit var guardarBtn: Button
+    private lateinit var volverBtn: Button
+    private lateinit var eliminarBtn: Button
 
     private val db = FirebaseFirestore.getInstance()
 
@@ -50,6 +53,8 @@ class PetsClinic : Fragment() {
         duenoEdit = view.findViewById(R.id.editDueno)
         veterinarioEdit = view.findViewById(R.id.editVeterinario)
         guardarBtn = view.findViewById(R.id.btnGuardar)
+        volverBtn = view.findViewById(R.id.btnVolver)
+        eliminarBtn = view.findViewById(R.id.btnEliminar)
 
         // Cargar los datos de la mascota
         cargarMascota()
@@ -57,6 +62,16 @@ class PetsClinic : Fragment() {
         // Configurar el botón de guardar
         guardarBtn.setOnClickListener {
             actualizarMascota()
+        }
+
+        eliminarBtn.setOnClickListener {
+            eliminarMascota()
+        }
+
+
+        volverBtn.setOnClickListener {
+            val intent = Intent(requireContext(), PetsTar::class.java) //Para volver a una actividad desde un fragmento se debe usar requireContext() en vez de this
+            startActivity(intent)
         }
 
         return view
@@ -107,4 +122,18 @@ class PetsClinic : Fragment() {
                 Toast.makeText(requireContext(), "Error al actualizar: ${exception.message}", Toast.LENGTH_SHORT).show()
             }
     }
+
+    private fun eliminarMascota() {
+
+        db.collection("mascotas").document(mascotaId)
+            .delete()
+            .addOnSuccessListener {
+                Toast.makeText(requireContext(), "Mascota eliminada", Toast.LENGTH_SHORT).show()
+                parentFragmentManager.popBackStack() // Regresar al fragment anterior
+            }
+            .addOnFailureListener { exception ->
+                Toast.makeText(requireContext(), "Error al eliminar: ${exception.message}", Toast.LENGTH_SHORT).show()
+            }
+    }
+
 }
