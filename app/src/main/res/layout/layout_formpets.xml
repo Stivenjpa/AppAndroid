@@ -1,0 +1,69 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Nombre de la mascota -->
+
+        <EditText
+            android:id="@+id/editNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de la mascota"
+            android:minHeight="48dp" />
+
+        <!-- Edad de la mascota -->
+        <EditText
+            android:id="@+id/editEdad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Edad"
+            android:inputType="number"
+            android:minHeight="48dp" />
+
+        <!-- Vacunas -->
+        <EditText
+            android:id="@+id/editVacunas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Vacunas (separadas por coma)"
+            android:minHeight="48dp" />
+
+        <!-- Nombre del dueño -->
+        <EditText
+            android:id="@+id/editDueno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del dueño"
+            android:minHeight="48dp" />
+
+        <!-- Nombre del veterinario -->
+        <EditText
+            android:id="@+id/editVeterinario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del veterinario"
+            android:minHeight="48dp" />
+
+        <!-- Botón para guardar -->
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="384dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Guardar Mascota" />}
+
+        <Button
+            android:id="@+id/btnAtras"
+            android:layout_width="384dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Atras" />
+
+    </LinearLayout>
+</ScrollView>

@@ -43,11 +43,15 @@ android {
 
 dependencies {
     //Firebase
-    implementation(platform("com.google.firebase:firebase-bom:33.10.0"))
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation ("com.google.firebase:firebase-firestore:24.0.1")
+    implementation(platform(libs.firebase.bom))
     implementation("com.google.firebase:firebase-analytics")
-    implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("com.google.firebase:firebase-auth-ktx:23.2.0")
-    implementation("com.google.android.gms:play-services-auth:21.3.0")
+    implementation ("androidx.constraintlayout:constraintlayout:2.2.1")
+    implementation ("com.github.bumptech.glide:glide:4.15.1")
+    implementation ("androidx.recyclerview:recyclerview:1.3.1")
+    implementation ("androidx.cardview:cardview:1.0.0")
+    implementation(libs.firebase.auth.ktx)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
