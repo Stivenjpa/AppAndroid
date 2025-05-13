@@ -38,8 +38,8 @@ class PetsAdapter(private val listaMascotas: List<Pet>, private val onClick: (Pe
 
         // Manejo de URL vacía en fotoUrl
         Glide.with(holder.itemView.context)
-            .load(if (mascota.fotoUrl.isNotEmpty()) mascota.fotoUrl else R.drawable.mascota_default)
-            .placeholder(R.drawable.mascota_default) // Imagen por defecto
+            .load(if (mascota.fotoUrl.isNotEmpty()) mascota.fotoUrl else R.drawable.mascota_default1)
+            .placeholder(R.drawable.mascota_default1) // Imagen por defecto
             .into(holder.imgMascota)
 
         holder.itemView.setOnClickListener {

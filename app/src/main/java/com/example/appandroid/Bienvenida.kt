@@ -27,9 +27,10 @@ class Bienvenida : AppCompatActivity() {
         btnPetsFrag = findViewById(R.id.bntFormPets2)
 
         btnRegistrar.setOnClickListener {
-            val intent = Intent(this, FormPets::class.java) //Salimos a la pantalla "FormPets"
-            startActivity(intent)
-        }
+         val intent = Intent(this, FormPets::class.java) //Salimos a la pantalla "FormPets"
+          startActivity(intent)
+       }
+
 
         btnsalir.setOnClickListener {
             val intent = Intent(this, Login::class.java) //Salimos a la pantalla "login"

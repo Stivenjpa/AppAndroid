@@ -5,13 +5,13 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="20dp"
     card_view:cardCornerRadius="12dp"
     card_view:cardElevation="6dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
         android:padding="12dp">
 
@@ -20,58 +20,58 @@
             android:id="@+id/imgMascota"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:contentDescription="Imagen de la mascota"
             android:scaleType="centerCrop"
-            android:src="@drawable/mascota_default"
-            android:contentDescription="Imagen de la mascota" /> <!-- Descripción accesible -->
+            android:src="@drawable/mascota_default1" /> <!-- Descripción accesible -->
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_marginStart="12dp">
+            android:orientation="vertical">
 
             <!-- Nombre de la mascota -->
             <TextView
                 android:id="@+id/txtNombre"
-                android:text="Nombre:"
-                android:textStyle="bold"
-                android:textSize="16sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="Nombre de la mascota" /> <!-- Descripción accesible -->
+                android:contentDescription="Nombre de la mascota"
+                android:text="Nombre:"
+                android:textSize="16sp"
+                android:textStyle="bold" /> <!-- Descripción accesible -->
 
             <!-- Edad de la mascota -->
             <TextView
                 android:id="@+id/txtEdad"
-                android:text="Edad:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="Edad de la mascota" /> <!-- Descripción accesible -->
+                android:contentDescription="Edad de la mascota"
+                android:text="Edad:" /> <!-- Descripción accesible -->
 
             <!-- Vacunas de la mascota -->
             <TextView
                 android:id="@+id/txtVacunas"
-                android:text="Vacunas:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="Vacunas de la mascota" /> <!-- Descripción accesible -->
+                android:contentDescription="Vacunas de la mascota"
+                android:text="Vacunas:" /> <!-- Descripción accesible -->
 
             <!-- Dueño de la mascota -->
             <TextView
                 android:id="@+id/txtDueno"
-                android:text="Dueño:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="Nombre del dueño de la mascota" /> <!-- Descripción accesible -->
+                android:contentDescription="Nombre del dueño de la mascota"
+                android:text="Dueño:" /> <!-- Descripción accesible -->
 
             <!-- Veterinario de la mascota -->
             <TextView
                 android:id="@+id/txtVeterinario"
-                android:text="Veterinario:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="Nombre del veterinario de la mascota" /> <!-- Descripción accesible -->
+                android:contentDescription="Nombre del veterinario de la mascota"
+                android:text="Veterinario:" /> <!-- Descripción accesible -->
 
         </LinearLayout>
     </LinearLayout>
