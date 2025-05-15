@@ -1,4 +1,4 @@
-package com.example.appandroid
+package com.example.appandroid;
 
 import android.os.Bundle
 import android.util.Log
