@@ -28,6 +28,10 @@
         <activity android:name=".FormPets"
             android:theme="@style/Theme.AppCompat.Light"/>
         <activity android:name=".PetsTar" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
