@@ -30,6 +30,7 @@ A continuación, se detallan las principales Activities, Fragments, Layouts y ot
   - Después del retraso, navega automáticamente a `Login` Activity y finaliza `SplashActivity` para que el usuario no pueda volver a ella.
 - **Layout (`layout_splash.xml`):**
   - Contiene una imagen de fondo (`@drawable/login` o similar) que ocupa toda la pantalla, proporcionando una bienvenida visual.
+    ![Pantalla Splash](img/layout_splash.jpeg)
 
 #### 2.1.2. `Login.kt`
 
@@ -55,6 +56,7 @@ A continuación, se detallan las principales Activities, Fragments, Layouts y ot
   - Dos `EditText` (`TextEmail`, `TextPassword`) para la entrada de credenciales, estilizados con fondo blanco redondeado (`@drawable/bg_edittext_rounded_white`), texto negro y hints grises. Tienen márgenes para separación.
   - Un `TextView` (`textCorreo3`) con el texto "¿No tienes cuenta? Regístrate", con un efecto de sombreado para resaltar sobre un fondo claro.
   - Dos `Button` (`Btnlogin`, `Btnregistrar`) estilizados con fondo verde oscuro redondeado (`@drawable/bg_button_rounded_corners_green`) y texto blanco. Están distribuidos horizontalmente usando una `Guideline`.
+    ![Pantalla Login](img/layout_login.jpeg)
 
 #### 2.1.3. `Bienvenida.kt`
 
@@ -73,6 +75,7 @@ A continuación, se detallan las principales Activities, Fragments, Layouts y ot
   - Un `ImageButton` (`bntFormPetsPrinc`) redondo con fondo verde oscuro (`@drawable/bg_button_round_green`) y una imagen (ej. `@drawable/iconpets`), probablemente para añadir mascotas.
   - Dos `Button` (`bntFormPets`, `bntFormPets2`) estilizados con fondo verde oscuro y esquinas redondeadas (`@drawable/bg_button_rounded_corners_green`) y texto blanco. Estos botones permiten acceder a diferentes secciones.
   - Otros `TextViews` (`textNamePrinc`, `textNamePrinc2`) con texto blanco para describir las acciones de los botones.
+    ![Pantalla Bienvenida](img/layout_bienvenida.jpeg)
 
 #### 2.1.4. `FormPets.kt`
 
@@ -94,6 +97,7 @@ A continuación, se detallan las principales Activities, Fragments, Layouts y ot
   - Un `ImageButton` (`btnAtras`) redondo con fondo verde oscuro (`@drawable/bg_button_round_green`) e icono de flecha, ubicado en la esquina superior derecha para volver.
   - Cinco `EditText` (`editNombre`, `editEdad`, `editVacunas`, `editDueno`, `editVeterinario`) para ingresar los datos de la mascota. Están estilizados con fondo blanco redondeado (`@drawable/bg_edittext_rounded_white`) y tienen márgenes de `16dp`. Están encadenados verticalmente y distribuidos.
   - Un `Button` (`btnGuardar`) estilizado con fondo verde oscuro redondeado (`@drawable/bg_button_rounded_corners_green`), texto blanco y ancho `match_parent` con márgenes, ubicado en la parte inferior.
+    ![Pantalla Formulario Mascotas](img/layout_formpets.jpeg)
 
 #### 2.1.5. `PetsTar.kt`
 
@@ -104,6 +108,7 @@ A continuación, se detallan las principales Activities, Fragments, Layouts y ot
   - En su método `onCreate`, si `savedInstanceState` es nulo (es decir, la actividad se crea por primera vez), inicia una transacción de fragmentos para cargar `PetsFragment` dentro de un contenedor (probablemente un `FrameLayout` con ID `R.id.fragment_mascotas`).
 - **Layout (`layout_petstar.xml`):**
   - Su contenido principal es un `FrameLayout` (con ID `R.id.fragment_mascotas`) que sirve como anfitrión para los fragmentos `PetsFragment` y `PetsClinic`.
+    ![Layout PetsTar](img/layout_petstar.jpeg)
 
 ### 2.2. Fragments
 
@@ -176,6 +181,7 @@ A continuación, se detallan las principales Activities, Fragments, Layouts y ot
   - Dentro del `CardView`, un `ConstraintLayout` organiza los elementos.
   - Un `ImageView` (`imgMascota`) para mostrar la foto de la mascota.
   - Varios `TextView` (`txtNombre`, `txtEdad`, `txtVacunas`, `txtDueno`, `txtVeterinario`) para mostrar los detalles de la mascota, con texto de color blanco para mejorar la legibilidad sobre el fondo oscuro. Se han ajustado paddings y tamaños de fuente para una mejor presentación.
+    ![Layout Tarjeta Mascota](img/layout_tarjetamascota.jpeg)
 
 ### 2.4. Modelos de Datos (Data Classes)
 
